@@ -8,12 +8,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ettercap
-PKG_VERSION:=0.8.2
+PKG_VERSION:=0.8.2-git20161003
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/Ettercap/ettercap/releases/download/v0.8.2/
-PKG_MD5SUM:=b6b20851862f55644d5f296f77b785d1
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL=https://github.com/Ettercap/ettercap.git
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
+PKG_SOURCE_VERSION:=7723997993d49ef386e7ed811ec753f25b6bafe1
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.xz
 
 PKG_INSTALL:=1
 
