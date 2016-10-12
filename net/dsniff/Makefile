@@ -22,7 +22,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/dsniff
   SECTION:=net
   CATEGORY:=Network
-  DEPENDS:=+libpcap +libnids +libnet0 +libopenssl +libgdbm $(LIBRPC_DEPENDS)
+  DEPENDS:=+libpcap +libnids +libopenssl +libgdbm $(LIBRPC_DEPENDS)
   TITLE:=A collection of tools for network auditing and penetration testing
   URL:=http://www.monkey.org/~dugsong/dsniff/
 endef
@@ -38,7 +38,7 @@ define Build/Configure
 		--with-gdbm="$(STAGING_DIR)/usr" \
 		--with-libnids="$(STAGING_DIR)/usr" \
 		--with-libpcap="$(STAGING_DIR)/usr" \
-		--with-libnet="$(STAGING_DIR)/usr/lib/libnet-1.0.x" \
+		--with-libnet="$(STAGING_DIR)/usr/lib/libnet-1.1.x" \
 		--with-openssl="$(STAGING_DIR)/usr" \
 		--without-db \
 		--without-x \
